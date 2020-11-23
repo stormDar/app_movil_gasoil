@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">App Gasoil Zaragoza2012</string>
+    <string name="title_activity_main">App Gasoil Zaragoza2012</string>
+    <string name="package_name">gasoil.zaragoza2012es</string>
+    <string name="custom_url_scheme">gasoil.zaragoza2012es</string>
+</resources>

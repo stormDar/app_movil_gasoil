@@ -1,0 +1,13 @@
+{
+  "appId": "gasoil.zaragoza2012es",
+  "appName": "App Gasoil Zaragoza2012",
+  "bundledWebRuntime": false,
+  "npmClient": "npm",
+  "webDir": "www",
+  "plugins": {
+    "SplashScreen": {
+      "launchShowDuration": 0
+    }
+  },
+  "cordova": {}
+}
