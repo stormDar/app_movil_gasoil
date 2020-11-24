@@ -1,20 +1,11 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
-
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+<ion-content class="ion-padding-top ion-padding-start ion-padding-end">
+  <img src="assets/img/logo.png" alt="Zaragoza 2012 logo" />
+  <h4 class="ion-text-center">Aplicación de control del gasoil</h4>
+  <div>&nbsp;</div>
+  <form [formGroup]="loginForm" (ngSubmit)="loginUser(loginForm.value)">
+    <ion-item>
+      <ion-label>Código empleado</ion-label>
+      <ion-input formControlName="pin"></ion-input>
+    </ion-item>
+  </form>
 </ion-content>
