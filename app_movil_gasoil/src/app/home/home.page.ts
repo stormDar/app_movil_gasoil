@@ -23,4 +23,8 @@ export class HomePage {
   ngOnInit() {
   }
 
+  loginUser(credentials){
+    console.log(credentials)
+  }
+
 }

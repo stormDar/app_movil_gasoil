@@ -7,5 +7,9 @@
       <ion-label>Código empleado:</ion-label>
       <ion-input type="password" formControlName="pin"></ion-input>
     </ion-item>
+    <ion-button expand="full" shape="round" color="success" 
+    [disabled]="!loginForm.valid" type="submit">
+      Login
+    </ion-button>
   </form>
 </ion-content>
