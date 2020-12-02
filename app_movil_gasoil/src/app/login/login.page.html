@@ -7,6 +7,13 @@
       <ion-label>Código empleado:</ion-label>
       <ion-input type="password" formControlName="pin"></ion-input>
     </ion-item>
+    <div class="validation-error">
+      <ng-container *ngFor="let validation of validation_message.pin">
+        <div *ngIf="loginForm.get('pin').hasError(validation.type) && (loginForm.get('pin').dirty || loginForm.get('pin').touched)">
+          {{ validation.message }}
+        </div>
+      </ng-container>
+    </div>
     <ion-button expand="full" shape="round" color="success" 
     [disabled]="!loginForm.valid" type="submit">
       Login
