@@ -1,0 +1,15 @@
+<ion-content class="ion-padding-top ion-padding-start ion-padding-end">
+  <img src="assets/img/logo.png" alt="Zaragoza 2012 logo" />
+  <h4 class="ion-text-center">Aplicación de control del gasoil</h4>
+  <div>&nbsp;</div>
+  <form [formGroup]="loginForm" (ngSubmit)="loginUser(loginForm.value)">
+    <ion-item>
+      <ion-label>Código empleado:</ion-label>
+      <ion-input type="password" formControlName="pin"></ion-input>
+    </ion-item>
+    <ion-button expand="full" shape="round" color="success" 
+    [disabled]="!loginForm.valid" type="submit">
+      Login
+    </ion-button>
+  </form>
+</ion-content>
