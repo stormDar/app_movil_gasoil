@@ -9,6 +9,27 @@ import { FormGroup, FormBuilder, FormControl, Validators } from '@angular/forms'
 export class HomePage {
 
   insertForm: FormGroup;
+  validation_message = {
+    matricula: [
+      { type: "required", message: "La matrícula es requerida" },
+      { type: "pattern", message: "Matrícula introducida incorrecta!"}
+    ],
+    cantidad: [
+      { type: "required", message: "La cantidad es requerida" },
+      { type: "pattern", message: "Cantidad introducida invalida!"}
+    ],
+    kilometraje: [
+      { type: "required", message: "El kilometraje del vehiculo es requerido" },
+      { type: "pattern", message: "Kilometraje introducido invalido!"}
+    ],
+    /*empresa: [
+      { type: "required", message: "La empresa es requerida" }
+    ],*/
+    obra: [
+      { type: "required", message: "La obra es requerida" },
+      { type: "pattern", message: "Obra introducida incorrecta!"}
+    ]
+  };
 
   constructor(private formBuilder: FormBuilder) {
     this.insertForm = this.formBuilder.group({
@@ -28,11 +49,11 @@ export class HomePage {
         Validators.pattern("^[0-9]+$")
       ])
       ),
-      empresa: new FormControl("", Validators.compose([
-        Validators.required,
-        Validators.pattern("^[a-zA-Z]+$")
+      /*empresa: new FormControl("", Validators.compose([
+        Validators.required
+        /*Validators.pattern("^[a-zA-Z]+$")
       ])
-      ),
+      ),*/
       obra: new FormControl("", Validators.compose([
         Validators.required,
         Validators.pattern("^[a-zA-Z0-9]+$")

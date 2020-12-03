@@ -8,26 +8,69 @@
       <ion-label>Matricula</ion-label>
       <ion-input formControlName="matricula"></ion-input>
     </ion-item>
+    <div class="validation-error">
+      <ng-container *ngFor="let validation of validation_message.matricula">
+        <div *ngIf="insertForm.get('matricula').hasError(validation.type) && (insertForm.get('matricula').dirty || insertForm.get('matricula').touched)">
+          {{ validation.message }}
+        </div>
+      </ng-container>
+    </div>
     <p></p>
     <ion-item>
       <ion-label>Cantidad</ion-label>
       <ion-input formControlName="cantidad"></ion-input>
     </ion-item>
+    <div class="validation-error">
+      <ng-container *ngFor="let validation of validation_message.cantidad">
+        <div *ngIf="insertForm.get('cantidad').hasError(validation.type) && (insertForm.get('cantidad').dirty || insertForm.get('cantidad').touched)">
+          {{ validation.message }}
+        </div>
+      </ng-container>
+    </div>
     <p></p>
     <ion-item>
       <ion-label>Kilometraje</ion-label>
       <ion-input formControlName="kilometraje"></ion-input>
     </ion-item>
+    <div class="validation-error">
+      <ng-container *ngFor="let validation of validation_message.kilometraje">
+        <div *ngIf="insertForm.get('kilometraje').hasError(validation.type) && (insertForm.get('kilometraje').dirty || insertForm.get('kilometraje').touched)">
+          {{ validation.message }}
+        </div>
+      </ng-container>
+    </div>
     <p></p>
-    <ion-item>
-      <ion-label>EMPRESA</ion-label>
-      <ion-input formControlName="empresa"></ion-input>
+    <!--<ion-item>
+      <ion-label>Empresa</ion-label>
+      <ion-select formControlName="empresa" /*es posible que el value sea el problema*/ value="empresa" interface="action-sheet">
+        <ion-select-option value="zaragoza2012">Zaragoza 2012</ion-select-option>
+        <ion-select-option value="odel">Odel</ion-select-option>
+        <ion-select-option value="integra">Integra</ion-select-option>
+        <ion-select-option value="clenazcom">Cleanzcom</ion-select-option>
+        <ion-select-option value="momentum_alquiler">Momentum Alquiler</ion-select-option>
+        <ion-select-option value="automatismos_felipe">Automatismos Felipe</ion-select-option>
+        <ion-select-option value="particular">Particular</ion-select-option>
+      </ion-select>
     </ion-item>
+    <div class="validation-error">
+      <ng-container *ngFor="let validation of validation_message.empresa">
+        <div *ngIf="insertForm.get('empresa').hasError(validation.type) && (insertForm.get('empresa').dirty || insertForm.get('empresa').touched)">
+          {{ validation.message }}
+        </div>
+      </ng-container>
+    </div>-->
     <p></p>
     <ion-item>
       <ion-label>Obra</ion-label>
       <ion-input formControlName="obra"></ion-input>
     </ion-item>
+    <div class="validation-error">
+      <ng-container *ngFor="let validation of validation_message.obra">
+        <div *ngIf="insertForm.get('obra').hasError(validation.type) && (insertForm.get('obra').dirty || insertForm.get('obra').touched)">
+          {{ validation.message }}
+        </div>
+      </ng-container>
+    </div>
     <p></p>
     <ion-item>
       <ion-label>Notas</ion-label>
