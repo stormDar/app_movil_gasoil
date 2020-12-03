@@ -1,3 +1,42 @@
+<ion-header>
+  <h1 class="ion-text-center"> NUEVA SALIDA DE GASOIL</h1>
+</ion-header>
 <ion-content class="ion-padding-top ion-padding-start ion-padding-end">
   <h4 class="ion-text-center">Bienvenido a la aplicación de control del gasoil</h4>
+  <form [formGroup] = "insertForm" (ngSubmit) = "insertReg(insertForm.value)">
+    <ion-item>
+      <ion-label>Matricula</ion-label>
+      <ion-input formControlName="matricula"></ion-input>
+    </ion-item>
+    <p></p>
+    <ion-item>
+      <ion-label>Cantidad</ion-label>
+      <ion-input formControlName="cantidad"></ion-input>
+    </ion-item>
+    <p></p>
+    <ion-item>
+      <ion-label>Kilometraje</ion-label>
+      <ion-input formControlName="kilometraje"></ion-input>
+    </ion-item>
+    <p></p>
+    <ion-item>
+      <ion-label>EMPRESA</ion-label>
+      <ion-input formControlName="empresa"></ion-input>
+    </ion-item>
+    <p></p>
+    <ion-item>
+      <ion-label>Obra</ion-label>
+      <ion-input formControlName="obra"></ion-input>
+    </ion-item>
+    <p></p>
+    <ion-item>
+      <ion-label>Notas</ion-label>
+      <ion-input formControlName="notas"></ion-input>
+    </ion-item>
+    <p></p>
+    <ion-button expand="full" shape="round" color="success" 
+    [disabled]="!insertForm.valid" type="submit">
+      Insertar
+    </ion-button>
+  </form>
 </ion-content>
