@@ -12,7 +12,8 @@ export class HomePage {
   validation_message = {
     matricula: [
       { type: "required", message: "La matrícula es requerida" },
-      { type: "pattern", message: "Matrícula introducida incorrecta!"}
+      { type: "pattern", message: "Matrícula introducida incorrecta!"},
+      { type: "maxLength", message: "Matrícula introducida fuera de formato!"}
     ],
     cantidad: [
       { type: "required", message: "La cantidad es requerida" },
@@ -35,8 +36,10 @@ export class HomePage {
     this.insertForm = this.formBuilder.group({
       matricula: new FormControl("", Validators.compose([
         Validators.required,
-        Validators.pattern("^[a-zA-Z]{1}[0-9]{4}[a-zA-Z]{2}$ || ^[0-9]{4}[a-zA-Z]{3}$"),
-        Validators.maxLength(7),
+        /*Validators.pattern("^[a-zA-Z]+[0-9]+[0-9]+[0-9]+[0-9]+[a-zA-Z]+[a-zA-Z]$ || ^[0-9]+[0-9]+[0-9]+[0-9]+[a-zA-Z]+$"),*/
+        Validators.pattern("(^[0-9]+[0-9]+[0-9]+[0-9]+[a-zA-Z]+[a-zA-Z]+[a-zA-Z]$) || (^[a-zA-Z]+[0-9]+[0-9]+[0-9]+[0-9]+[a-zA-Z]+[a-zA-Z]$)"),
+        Validators.minLength(7),
+        Validators.maxLength(7)
       ])
       ),
       cantidad: new FormControl("", Validators.compose([
