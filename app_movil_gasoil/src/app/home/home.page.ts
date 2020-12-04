@@ -22,9 +22,9 @@ export class HomePage {
       { type: "required", message: "El kilometraje del vehiculo es requerido" },
       { type: "pattern", message: "Kilometraje introducido invalido!"}
     ],
-    /*empresa: [
+    empresa: [
       { type: "required", message: "La empresa es requerida" }
-    ],*/
+    ],
     obra: [
       { type: "required", message: "La obra es requerida" },
       { type: "pattern", message: "Obra introducida incorrecta!"}
@@ -49,11 +49,11 @@ export class HomePage {
         Validators.pattern("^[0-9]+$")
       ])
       ),
-      /*empresa: new FormControl("", Validators.compose([
+      empresa: new FormControl("", Validators.compose([
         Validators.required
-        /*Validators.pattern("^[a-zA-Z]+$")
+        /*Validators.pattern("^[a-zA-Z]+$")*/
       ])
-      ),*/
+      ),
       obra: new FormControl("", Validators.compose([
         Validators.required,
         Validators.pattern("^[a-zA-Z0-9]+$")
