@@ -19,4 +19,12 @@ export class AuthenticateService {
     })
   }
 
+  /*loginUser(credentials){
+    fetch("localhost/aplicacion-tablet-gasoil/api/authentication.php?SenderID=${credentials.pin}")
+    .then((res) => {
+
+    })
+    .catch((error) => {console.log(error)});
+  }*/
+
 }
