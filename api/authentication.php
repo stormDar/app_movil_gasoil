@@ -31,6 +31,7 @@ else
 
     $stmt = mysqli_query($connectionInfo->conn, $query);
     $row_cnt = mysqli_num_rows($stmt);
+    //$returndata = false;
 
 
     if (!$stmt){
@@ -48,14 +49,18 @@ else
         if ($row_cnt == 1){
             //echo json_encode(array('results' => $contacts), JSON_PRETTY_PRINT);
             //$returndata = 0;
-            $returndata = ["auth" => "1"];
+            $returndata = ["auth" => "true"];
             //echo $returndata;
+            //$returndata = true;
             echo json_encode($returndata, JSON_PRETTY_PRINT);
         } else {
             //$returndata = ["auth" => "0"];
             //echo $returndata;
             //echo json_encode($returndata, JSON_PRETTY_PRINT);
-            $returndata = ERROR;
+            //$returndata = ERROR;
+            $returndata = ["auth" => "false"];
+            echo json_encode($returndata, JSON_PRETTY_PRINT);
+            
         }
         
     }
